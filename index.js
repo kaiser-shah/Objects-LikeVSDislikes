@@ -6,7 +6,7 @@ const prompt = require('prompt-sync')();
 function likeOrDislike(like) {
   // for loop > check first item, log status on variable.
   let status = 'nothing';
-  for (let i = 0; i < like.length - 1; ) {
+  for (let i = 0; i < like.length;) {
     //Check if next item is a pair. If yes, log status as 'nothing'.
     // if ((i = like.length - 1)) {
     //   // if current status is 'nothing' check previous item to see if it a pair. If not, can save status as 'i' else leave as 'nothing'.
@@ -16,7 +16,7 @@ function likeOrDislike(like) {
       status = 'nothing';
       i += 2;
     } else {
-      status = like[i + 1];
+      status = like[i];
       i++;
     }
     console.log(status);
